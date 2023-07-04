@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main id="main"></main>
+    <script>
+        const mainTag = document.querySelector("#main")
+        mainTag.innerHTML = "<p class='count'>click</p>"
+        const countTag = document.querySelector(".count")
+        let sum = 0
+        countTag.addEventListener('click', function(){
+            sum += 1
+            countTag.textContent = 'your count : ' + sum
+        })
+    </script>
+</body>
+</html>
