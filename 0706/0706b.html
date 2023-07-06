@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html 기본문법</title>
+</head>
+<body>
+    <!-- 
+        table tag
+        table 표(table) 삽입
+        th  표의 제목
+        tr  표의 행 삽입
+        td  표의 일반요소 생성
+    -->
+    <center>
+        <table border="1" width="640px">
+            <tr>
+                <th>춘천</th>
+                <th>원주</th>
+                <th>강릉</th>
+            </tr>
+            <tr align="center">
+                <td>200</td>
+                <td>300</td>
+                <td>400</td>
+            </tr>
+            <tr align="right">
+                <td>닭갈비</td>
+                <td>비빔밥</td>
+                <td>회센터</td>
+            </tr>
+        </table>
+    </center>
+    <hr>
+    <center>
+        <table border="3" width="640px" height="300px">
+            <tr>
+                <th></th>
+                <th>월</th>
+                <th>화</th>
+                <th>수</th>
+                <th>목</th>
+                <th>금</th>
+            </tr>
+            <tr align="center">
+                <td>1교시</td>
+                <td>2교시</td>
+                <td>3교시</td>
+                <td>4교시</td>
+                <td>5교시</td>
+                <td>6교시</td>
+            </tr>
+        </table>
+    </center>
+    <hr>
+    <!-- 
+        colspan: 셀의 너비(열) 합치기
+        rowspan: 셀의 높이(행) 합치기
+    -->
+    <center>
+        <table border="1" width="640px" height="300px">
+            <tr>
+                <th colspan="2">지역별 홍차</th>
+            </tr>
+            <tr>
+                <th rowspan="3">중국</th>
+                <td>정산소종</td>
+            </tr>
+            <tr>
+                <td>기문</td>
+            </tr>
+            <tr>
+                <td>운남</td>
+            </tr>
+            <tr>
+                <th rowspan="4">인도 및 스리랑카</th>
+                <td>아삼</td>
+            </tr>
+            <tr>
+                <td>실론</td>
+            </tr>
+            <tr>
+                <td>다질링</td>
+            </tr>
+            <tr>
+                <td>닐기리</td>
+            </tr>
+        </table>
+    </center>
+</body>
+</html>
