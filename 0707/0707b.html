@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html 기본문법</title>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        div{
+            width: 100vw; height: 100vh;
+            background-color: burlywood;
+        }
+        div:nth-of-type(2){
+            background-color: aqua;
+        }
+
+        .top{
+            position: fixed;
+            width: 30px; height: 30px;
+            bottom: 20px;
+            right: 20px;
+            background-color: bisque;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- 책갈피 이동 -->
+    <hr>
+    <a href="#alpha">alpha 구분</a>
+    <a href="#beta">beta 구분</a>
+    <a href="#gamma">gamma 구분</a>
+    <div id="alpha">alpha</div>
+    <div id="beta">beta</div>
+    <div id="gamma">gamma</div>
+    <a class="top" href="#">a</a>
+    <script>
+        const top = document.querySelector(".top");
+
+        top.addEventListener('click', function(){
+            document.documentElement.scrollTop = 0;
+        })
+    </script>
+</body>
+</html>
