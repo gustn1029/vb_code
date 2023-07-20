@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+/* 고정 위치를 사용해 바 생성 */
+
+.container{
+    margin-top: 50px; margin-left: 50px;
+}
+
+.top_bar{background-color: red;
+    position: fixed;
+    left: 0px; top: 0px; right: 0;
+    height: 50px;
+}
+
+.left_bar{
+    background-color: blue;
+    position: fixed;
+    left: 0px; top: 50px; bottom: 0;
+    width: 50px;
+}

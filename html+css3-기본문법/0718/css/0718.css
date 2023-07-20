@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+/* 
+    position:   relative 적용된 요소의 현재 위치값을 기준으로 상대 위치
+    absolute:   부모요소의 구간을 기준으로 절대 위치
+    pixed:      웹브라우저를 기준으로 절대 위치
+*/
+
+/* 초기화 */
+* {margin: 0px;}
+
+section{
+    width: 300px; height: 200px;
+}
+
+section:nth-of-type(1){background-color: pink;}
+section:nth-of-type(2){
+    position: relative;
+    /*  left: 50%; right: 50%;
+    transform: translate(-50%, 0); */
+    background-color: lightblue;
+}
+
+.wrap{
+    width: 400px; 
+    border: 5px solid black;
+    margin: 50px auto;
+}
+.wrap::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.wrap .left{
+    width: 200px; height: 200px;
+    background-color: lightgreen;
+    float: left;
+}
+
+.wrap .right{
+    width: 200px; height: 200px;
+    background-color: lightblue;
+    float: left;
+    position: relative;
+}
+
+.wrap .right .box {
+    width: 100px; height: 100px;
+    background-color: red;
+    position: absolute;
+    top: 50%; bottom: 50%;  left: 50%; right: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.wrap .bottom{
+    width: 400px; height: 100px;
+    background-color: pink;
+    float: left;
+}

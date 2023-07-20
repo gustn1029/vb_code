@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+/* box-shadow, text-shadow 요소의 그림자 */
+/* 
+    box-shadow      가로축, 세로축, 퍼짐정도 색상 블록 요소의 그림자
+    text-shadow     가로축, 세로축, 퍼짐정도 색상 텍스트 요소의 그림자
+*/
+
+body{
+    background: linear-gradient(to top, yellow, white);
+}
+
+.aa::after, .cc::after{content: ""; display: block; clear: both;}
+.box1{
+    width: 300px;
+    height: 300px;
+    background-color: blue;
+    margin: 100px;
+    float: left;
+    box-shadow: 10px 10px 30px lightskyblue;
+}
+
+.box2{
+    width: 300px;
+    height: 300px;
+    background-color: red;
+    margin: 100px;
+    float: left;
+    box-shadow: -15px -15px 20px pink;
+}
+
+.bb p{
+    font-size: 80px; font-weight: 700; font-family: "arial";
+    line-height: 40px;
+    color: #333;
+}
+.txt1{
+    text-shadow: 20px 20px 10px #aaa;
+}
+
+/* border-radius - 모서리를 둥글게 만들기 */
+
+/* 
+    border-radius       px, %       모서리를 속성값만큼 둥글게 만듦 
+*/
+.box3{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    margin: 100px;
+    float: left;
+    border-radius: 30px;
+}
+
+.box4{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    margin: 100px;
+    float: left;
+    border-radius: 50%;
+}
+
+/* 
+    gradient        linear-gradient(방향, 색상1, 색상2) 선형 
+                    radial-gradient(색상1, 색상2) 타원
+*/
+
+.ee{
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin: 100px;
+    border: 1px solid red;
+}
+.ee:nth-of-type(1){background: linear-gradient(to bottom, red, blue);}
+.ee:nth-of-type(2){background: linear-gradient(to top, red, blue);}
+.ee:nth-of-type(3){background: linear-gradient(to right, red, blue);}
+.ee:nth-of-type(4){background: linear-gradient(to left, red, blue);}
+.ee:nth-of-type(5){background: linear-gradient(45deg, red, blue);}
+.ee:nth-of-type(6){background: radial-gradient(red,blue);}
+

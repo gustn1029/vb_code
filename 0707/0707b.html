@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>html 기본문법</title>
     <style>
+        html, body{all: unset;}
         html{
             scroll-behavior: smooth;
         }
@@ -13,7 +14,7 @@
             color: inherit;
         }
         div{
-            width: 100vw; height: 100vh;
+            width: calc(100vw - 17px); height: 100vh;
             background-color: burlywood;
         }
         div:nth-of-type(2){
@@ -33,16 +34,17 @@
 <body>
     <!-- 책갈피 이동 -->
     <hr>
-    <a href="#alpha">alpha 구분</a>
-    <a href="#beta">beta 구분</a>
-    <a href="#gamma">gamma 구분</a>
-    <div id="alpha">alpha</div>
-    <div id="beta">beta</div>
-    <div id="gamma">gamma</div>
-    <a class="top" href="#">a</a>
+    <ul>
+        <li class="link"><a href="#alpha">alpha 구분</a></li>
+        <li class="link"><a href="#beta">beta 구분</a></li>
+        <li class="link"><a href="#gamma">gamma 구분</a></li>
+    </ul>
+    <div class="box" id="alpha">alpha</div>
+    <div class="box" id="beta">beta</div>
+    <div class="box" id="gamma">gamma</div>
+    <a class="top" href="javascript:void(0)">top</a>
     <script>
-        const top = document.querySelector(".top");
-
+        const topLink = document.querySelector('.top');
         top.addEventListener('click', function(){
             document.documentElement.scrollTop = 0;
         })
